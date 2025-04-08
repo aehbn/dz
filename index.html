@@ -2,31 +2,39 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>موقعي الشخصي</title>
-  <!-- استيراد خط Tajawal من Google Fonts -->
+  <!-- استيراد خط Tajawal -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #001f3f; /* أزرق داكن */
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #001f3f, #0074D9); /* خلفية متدرجة */
       color: white;
       font-family: 'Tajawal', sans-serif;
       text-align: center;
-      padding: 30px;
+      padding: 30px 15px;
     }
 
     h1 {
       font-weight: 700;
-      font-size: 2.2em;
+      font-size: 2em;
+      transition: transform 0.3s ease;
     }
 
     h2 {
-      font-weight: 400;
-      font-size: 1.8em;
+      font-weight: 700;
+      font-size: 2.5em;
+      margin: 20px 0;
+      transition: transform 0.3s ease;
     }
 
     p {
       font-size: 1.2em;
       line-height: 2;
+      margin: 20px 0;
+      transition: transform 0.3s ease;
     }
 
     a {
@@ -36,35 +44,33 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 1.1em;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    a:hover,
+    h1:hover,
+    h2:hover,
+    p:hover {
+      transform: scale(1.05);
+      color: #FFD700; /* ذهبي عند المرور */
     }
 
     a:hover {
-      color: #00aced; /* لون سماوي عند المرور */
+      border-bottom: 2px solid #FFD700;
     }
 
     h3 {
       margin-top: 30px;
       font-size: 1.5em;
       font-weight: 700;
+      transition: transform 0.3s ease;
     }
-  </style>
-</head>
-<body>
 
-  <h1>بسم الله الرحمن الرحيم</h1>
-  <h2>مرحبا بكم في موقعي الشخصي</h2>
+    h3:hover {
+      transform: scale(1.1);
+      color: #00ffcc;
+    }
 
-  <p>
-    أنا عبد الحق، عمري 16 سنة وأنا طالب في ثانوية الشهيد جيلالي بونعامة.  
-    تحصلت على شهادة التعليم المتوسط بمعدل 16.5، وأجيد التحدث بالإنجليزية.  
-    اهتماماتي هي التصوير، المونتاج، البرمجة، وكل الأشياء المتعلقة بالألعاب الإلكترونية وقطع الحاسوب –الهاردوير–.
-  </p>
-
-  <a href="https://www.instagram.com/aeh.bn/" target="_blank">صفحة الانستغرام</a>
-  <a href="https://www.youtube.com/@realhakos" target="_blank">قناة اليوتيوب</a>
-
-  <p style="margin-top: 40px;">سبحان الله وبحمده، سبحان الله العظيم</p>
-  <h3>شكرا</h3>
-
-</body>
-</html>
+    /* تحسين العرض على الشاشات الصغيرة */
+    @media (max-width:
