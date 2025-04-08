@@ -3,50 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقعي الشخصي</title>
-  <!-- استيراد خط Tajawal -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="موقع عبد الحق الشخصي – مبرمج ومهتم بالمونتاج والتكنولوجيا.">
+  <meta name="keywords" content="عبد الحق, مونتاج, تكنولوجيا, موقع شخصي, برمجة, إبداع">
+  <title>موقع عبد الحق الشخصي – مبرمج ومهتم بالمونتاج</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- ستايل عام -->
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background-color: #001f3f; /* خلفية أزرق غامق فقط */
-      color: white;
-      font-family: 'Tajawal', sans-serif;
+      font-family: 'Tahoma', sans-serif;
       text-align: center;
-      padding: 30px 15px;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
     h1 {
-      font-weight: 700;
-      font-size: 2em;
-      transition: transform 0.3s ease;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
 
-    h2 {
-      font-weight: 700;
-      font-size: 2.5em;
-      margin: 20px 0;
-      transition: transform 0.3s ease;
-    }
-
-    p {
-      font-size: 1.2em;
-      line-height: 2;
-      margin: 20px 0;
-      transition: transform 0.3s ease;
-    }
-
-    a {
-      color: white;
-      display: inline-block;
-      margin: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1em;
-      border-bottom: 2px solid transparent;
-      transition: all 0.3s ease;
-    }
-
-    a:hover,
-    h1:hover,
+    .section {
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 500px;
+      border
