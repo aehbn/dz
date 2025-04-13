@@ -32,6 +32,7 @@
       --link-color: #00ADB5;
       --link-hover: #64ffda;
       --transition-time: 0.3s;
+      --nav-height: 60px;
     }
 
     body.light-theme {
@@ -49,10 +50,60 @@
       font-family: 'Cairo', sans-serif;
       text-align: center;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       direction: rtl;
       transition: background-color var(--transition-time) ease, color var(--transition-time) ease;
       line-height: 1.6;
+      padding-top: var(--nav-height);
+    }
+
+    /* قائمة التنقل */
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: var(--section-bg);
+      height: var(--nav-height);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color var(--transition-time), color var(--transition-time);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      background-color: rgba(0,0,0,0.1);
+    }
+
+    .nav-links a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
     }
 
     /* تحسينات الأداء للرسوم المتحركة */
@@ -116,6 +167,7 @@
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
       transition: transform var(--transition-time) ease;
+      scroll-margin-top: calc(var(--nav-height) + 20px);
     }
 
     .section:hover {
@@ -249,6 +301,98 @@
       font-size: 0.9rem;
     }
 
+    /* تنسيقات قسم الآراء */
+    .opinion-form {
+      background-color: var(--section-bg);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .opinion-form h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .opinion-form input,
+    .opinion-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid var(--link-color);
+      background-color: var(--section-bg);
+      color: var(--text-color);
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .opinion-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .image-upload {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .upload-btn {
+      background-color: var(--link-color);
+      color: var(--bg-color);
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background var(--transition-time);
+      font-weight: bold;
+    }
+
+    .upload-btn:hover {
+      background-color: var(--link-hover);
+    }
+
+    #fileName {
+      font-size: 0.9rem;
+      color: var(--text-color);
+    }
+
+    .opinions-container {
+      display: grid;
+      gap: 20px;
+    }
+
+    .opinion-card {
+      background-color: var(--section-bg);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .opinion-card h4 {
+      margin: 0 0 10px 0;
+      color: var(--accent);
+    }
+
+    .opinion-card p {
+      margin: 0 0 10px 0;
+    }
+
+    .opinion-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+      max-height: 200px;
+      object-fit: contain;
+    }
+
+    .opinion-date {
+      font-size: 0.8rem;
+      color: var(--link-color);
+      margin-top: 10px;
+      display: block;
+    }
+
     @media (max-width: 600px) {
       .section {
         margin: 10px;
@@ -257,6 +401,11 @@
       
       .projects-grid {
         grid-template-columns: 1fr;
+      }
+      
+      .nav-links {
+        gap: 10px;
+        font-size: 0.9rem;
       }
     }
 
@@ -273,7 +422,7 @@
         border: 1px solid #ddd;
       }
       
-      .theme-toggle, .welcome-screen {
+      .theme-toggle, .welcome-screen, .navbar {
         display: none;
       }
     }
@@ -282,6 +431,19 @@
 
 <body>
   <div class="welcome-screen" aria-hidden="true">مرحباً بك في موقع HAKOS</div>
+
+  <!-- قائمة التنقل الجديدة -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#about-heading" class="nav-link">من أنا</a></li>
+        <li><a href="#projects-heading" class="nav-link">مشاريعي</a></li>
+        <li><a href="#accounts-heading" class="nav-link">حساباتي</a></li>
+        <li><a href="#opinions-heading" class="nav-link">آراء الزوار</a></li>
+        <li><a href="#contact-heading" class="nav-link">تواصل معي</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل وضع الألوان">
     <span id="theme-icon">🌙</span> تبديل الوضع
@@ -295,7 +457,7 @@
   </header>
 
   <main>
-    <section class="section" aria-labelledby="about-heading">
+    <section class="section" aria-labelledby="about-heading" id="about">
       <h2 id="about-heading">من أنا 👋</h2>
       <p>طالب مهتم بالمونتاج، التصوير، ألعاب الفيديو، والسفر. أسعى لتطوير مهاراتي التقنية والإبداعية لإنشاء محتوى مميز ومشاريع مبتكرة.</p>
       
@@ -309,7 +471,7 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="projects-heading">
+    <section class="section" aria-labelledby="projects-heading" id="projects">
       <h2 id="projects-heading">مشاريعي 🚀</h2>
       <div class="projects-grid">
         <div class="project-card">
@@ -323,7 +485,7 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="accounts-heading">
+    <section class="section" aria-labelledby="accounts-heading" id="accounts">
       <h2 id="accounts-heading">حساباتي MY ACCOUNTS</h2>
       <div class="social-icons">
         <a href="https://www.instagram.com/aeh.bn/" target="_blank" rel="noopener noreferrer" aria-label="إنستغرام">
@@ -338,7 +500,33 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="contact-heading">
+    <section class="section" aria-labelledby="opinions-heading" id="opinions">
+      <h2 id="opinions-heading">آراء الزوار 📢</h2>
+      
+      <!-- نموذج إضافة رأي جديد -->
+      <div class="opinion-form">
+        <h3>شاركنا رأيك</h3>
+        <form id="opinionForm" enctype="multipart/form-data">
+          <input type="text" name="name" placeholder="اسمك" required aria-label="اسمك">
+          <textarea name="comment" rows="3" placeholder="اكتب رأيك هنا..." required aria-label="رأيك"></textarea>
+          <div class="image-upload">
+            <label for="opinionImage" class="upload-btn">
+              <i class="fas fa-camera"></i> اختر صورة
+            </label>
+            <input type="file" id="opinionImage" name="image" accept="image/*" style="display:none;">
+            <span id="fileName">لم يتم اختيار صورة</span>
+          </div>
+          <button type="submit">نشر الرأي</button>
+        </form>
+      </div>
+      
+      <!-- عرض الآراء -->
+      <div class="opinions-container" id="opinionsList">
+        <!-- سيتم عرض الآراء هنا من قاعدة البيانات -->
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="contact-heading" id="contact">
       <h2 id="contact-heading">تواصل معي 📩</h2>
       <form class="contact-form" id="contactForm">
         <input type="text" placeholder="اسمك" required aria-label="اسمك">
@@ -379,6 +567,9 @@
       setTimeout(() => {
         welcome.style.animation = 'welcomeFadeOut 0.5s forwards';
       }, 2500);
+      
+      // تحميل الآراء عند فتح الصفحة
+      loadOpinions();
     });
 
     // تحديث سنة حقوق النشر
@@ -401,6 +592,130 @@
         });
       });
     }
+
+    // قسم الآراء - معالجة إضافة آراء جديدة
+    document.addEventListener('DOMContentLoaded', function() {
+      // عرض اسم الملف عند اختياره
+      document.getElementById('opinionImage').addEventListener('change', function(e) {
+        const fileName = e.target.files[0] ? e.target.files[0].name : 'لم يتم اختيار صورة';
+        document.getElementById('fileName').textContent = fileName;
+      });
+
+      // معالجة إضافة رأي جديد
+      document.getElementById('opinionForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        
+        try {
+          const response = await fetch('add_opinion.php', {
+            method: 'POST',
+            body: formData
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            alert(result.message);
+            this.reset();
+            document.getElementById('fileName').textContent = 'لم يتم اختيار صورة';
+            loadOpinions(); // إعادة تحميل الآراء بعد الإضافة
+          } else {
+            alert(result.message || 'حدث خطأ أثناء حفظ الرأي');
+          }
+        } catch (error) {
+          alert('حدث خطأ أثناء الاتصال بالسيرفر');
+          console.error('Error:', error);
+        }
+      });
+      
+      // دالة لحماية من XSS
+      function escapeHtml(unsafe) {
+        return unsafe
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+    });
+
+    // دالة لجلب الآراء من قاعدة البيانات
+    async function loadOpinions() {
+      try {
+        const response = await fetch('get_opinions.php');
+        const opinions = await response.json();
+        
+        const container = document.getElementById('opinionsList');
+        container.innerHTML = '';
+        
+        if (opinions.length === 0) {
+          container.innerHTML = '<p>لا توجد آراء حتى الآن. كن أول من يشارك رأيه!</p>';
+          return;
+        }
+        
+        opinions.forEach(opinion => {
+          const opinionCard = document.createElement('div');
+          opinionCard.className = 'opinion-card';
+          opinionCard.innerHTML = `
+            <h4>${escapeHtml(opinion.name)}</h4>
+            <p>${escapeHtml(opinion.comment).replace(/\n/g, '<br>')}</p>
+            ${opinion.image_path ? `<img src="${opinion.image_path}" alt="صورة الرأي">` : ''}
+            <span class="opinion-date">${new Date(opinion.created_at).toLocaleDateString('ar-EG')}</span>
+          `;
+          container.appendChild(opinionCard);
+        });
+      } catch (error) {
+        console.error('Error loading opinions:', error);
+        document.getElementById('opinionsList').innerHTML = '<p>حدث خطأ أثناء تحميل الآراء</p>';
+      }
+    }
+
+    // دالة لتفعيل الروابط في قائمة التنقل
+    function setupNavLinks() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('.section');
+      
+      // تحديث الرابط النشط عند التمرير
+      window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 100) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}-heading`) {
+            link.classList.add('active');
+          }
+        });
+      });
+      
+      // سلوك ناعم للروابط
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
+    
+    // تفعيل قائمة التنقل
+    setupNavLinks();
   </script>
 </body>
 </html>
