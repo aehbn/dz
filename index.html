@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="موقع عبد الحق (HAKOS) - طالب ثانوي مهتم بالبرمجة، الهاردوير، وصناعة المحتوى">
-  <meta name="keywords" content="HAKOS, عبد الحق, برمجة, هاردوير, مونتاج, تصوير">
-  <meta name="author" content="عبد الحق">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="موقع عبد الحق (HAKOS) - طالب ثانوي مهتم بالبرمجة، الهاردوير، وصناعة المحتوى" />
+  <meta name="keywords" content="HAKOS, عبد الحق, برمجة, هاردوير, مونتاج, تصوير" />
+  <meta name="author" content="عبد الحق" />
   <title>HAKOS | عبد الحق - مطور ومصمم محتوى</title>
 
   <!-- Preload أهم الموارد -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" as="style">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style">
-  <link rel="preload" href="logo.png" as="image">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" as="style" />
+  <link
+    rel="preload"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    as="style"
+  />
+  <link rel="preload" href="logo.png" as="image" />
 
   <!-- استيراد خط كايرو مع تحسين الأداء -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
 
   <!-- Font Awesome مع تحميل متأخر -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    media="print"
+    onload="this.media='all'"
+  />
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
   <style>
     :root {
       --bg-color: #222831;
-      --text-color: #F4F4F9;
-      --section-bg: #393E46;
-      --accent: #FF6B35;
-      --link-color: #00ADB5;
+      --text-color: #f4f4f9;
+      --section-bg: #393e46;
+      --accent: #ff6b35;
+      --link-color: #00adb5;
       --link-hover: #64ffda;
       --transition-time: 0.3s;
       --nav-height: 60px;
     }
 
     body.light-theme {
-      --bg-color: #F4F4F9;
+      --bg-color: #f4f4f9;
       --text-color: #222831;
       --section-bg: #e0e0e0;
-      --accent: #FF6B35;
+      --accent: #ff6b35;
       --link-color: #0077b6;
       --link-hover: #0096c7;
     }
@@ -47,12 +61,13 @@
     body {
       background-color: var(--bg-color);
       color: var(--text-color);
-      font-family: 'Cairo', sans-serif;
+      font-family: "Cairo", sans-serif;
       text-align: center;
       margin: 0;
       padding: 0;
       direction: rtl;
-      transition: background-color var(--transition-time) ease, color var(--transition-time) ease;
+      transition: background-color var(--transition-time) ease,
+        color var(--transition-time) ease;
       line-height: 1.6;
       padding-top: var(--nav-height);
     }
@@ -68,7 +83,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
 
@@ -98,7 +113,7 @@
 
     .nav-links a:hover {
       color: var(--accent);
-      background-color: rgba(0,0,0,0.1);
+      background-color: rgba(0, 0, 0, 0.1);
     }
 
     .nav-links a.active {
@@ -111,19 +126,32 @@
       body {
         animation: fadeInBody 1.5s ease-in-out;
       }
-      
-      header, .section {
+
+      header,
+      .section {
         animation: fadeInSection 1.5s ease-in-out;
       }
-      
+
       @keyframes fadeInBody {
-        from { opacity: 0; transform: scale(1.05); }
-        to { opacity: 1; transform: scale(1); }
+        from {
+          opacity: 0;
+          transform: scale(1.05);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
-      
+
       @keyframes fadeInSection {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
 
@@ -165,7 +193,7 @@
       padding: 20px;
       max-width: 600px;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
       transition: transform var(--transition-time) ease;
       scroll-margin-top: calc(var(--nav-height) + 20px);
     }
@@ -197,7 +225,7 @@
       font-weight: bold;
       cursor: pointer;
       transition: background var(--transition-time), transform var(--transition-time);
-      font-family: 'Cairo', sans-serif;
+      font-family: "Cairo", sans-serif;
     }
 
     .theme-toggle:hover {
@@ -207,8 +235,10 @@
 
     .welcome-screen {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-color: var(--bg-color);
       color: var(--accent);
       display: flex;
@@ -220,9 +250,16 @@
     }
 
     @keyframes welcomeFadeOut {
-      0% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { opacity: 0; visibility: hidden; }
+      0% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
 
     .skills-container {
@@ -260,462 +297,201 @@
       transform: translateY(-5px);
     }
 
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid var(--link-color);
-      background-color: var(--section-bg);
-      color: var(--text-color);
-      font-family: 'Cairo', sans-serif;
-    }
-
-    .contact-form button {
-      padding: 10px;
-      background-color: var(--link-color);
-      color: var(--bg-color);
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background var(--transition-time);
-      font-family: 'Cairo', sans-serif;
-      font-weight: bold;
-    }
-
-    .contact-form button:hover {
-      background-color: var(--link-hover);
-    }
-
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      color: var(--text-color);
-      font-size: 0.9rem;
-    }
-
-    /* تنسيقات قسم الآراء */
-    .opinion-form {
+    /* قسم الفيديوهات */
+    .videos-section {
+      max-width: 700px;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
       background-color: var(--section-bg);
       padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
     }
 
-    .opinion-form h3 {
-      margin-top: 0;
-      color: var(--accent);
-    }
-
-    .opinion-form input,
-    .opinion-form textarea {
+    .videos-section iframe {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      border: 1px solid var(--link-color);
-      background-color: var(--section-bg);
-      color: var(--text-color);
-      font-family: 'Cairo', sans-serif;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
     }
 
-    .opinion-form textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    .image-upload {
-      margin: 15px 0;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .upload-btn {
-      background-color: var(--link-color);
-      color: var(--bg-color);
-      padding: 8px 15px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background var(--transition-time);
-      font-weight: bold;
-    }
-
-    .upload-btn:hover {
-      background-color: var(--link-hover);
-    }
-
-    #fileName {
-      font-size: 0.9rem;
-      color: var(--text-color);
-    }
-
-    .opinions-container {
-      display: grid;
-      gap: 20px;
-    }
-
-    .opinion-card {
-      background-color: var(--section-bg);
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid rgba(0,0,0,0.1);
-    }
-
-    .opinion-card h4 {
-      margin: 0 0 10px 0;
-      color: var(--accent);
-    }
-
-    .opinion-card p {
-      margin: 0 0 10px 0;
-    }
-
-    .opinion-card img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 10px;
-      max-height: 200px;
-      object-fit: contain;
-    }
-
-    .opinion-date {
-      font-size: 0.8rem;
-      color: var(--link-color);
-      margin-top: 10px;
-      display: block;
-    }
-
+    /* Responsive */
     @media (max-width: 600px) {
-      .section {
-        margin: 10px;
-        padding: 15px;
-      }
-      
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .nav-links {
+      .nav-container {
+        flex-direction: column;
         gap: 10px;
-        font-size: 0.9rem;
+        height: auto;
+        padding: 10px 20px;
       }
-    }
 
-    /* تحسينات للطباعة */
-    @media print {
-      body {
-        background-color: white;
-        color: black;
+      .nav-links {
+        justify-content: center;
       }
-      
-      .section {
-        background-color: #f9f9f9;
-        box-shadow: none;
-        border: 1px solid #ddd;
-      }
-      
-      .theme-toggle, .welcome-screen, .navbar {
-        display: none;
+
+      .videos-section iframe {
+        height: 250px;
       }
     }
   </style>
 </head>
-
 <body>
-  <div class="welcome-screen" aria-hidden="true">مرحباً بك في موقع HAKOS</div>
+  <div
+    class="welcome-screen"
+    aria-live="polite"
+    aria-label="شاشة ترحيب"
+  >
+    مرحبا بك في موقع HAKOS
+  </div>
 
-  <!-- قائمة التنقل الجديدة -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="القائمة الرئيسية">
     <div class="nav-container">
       <ul class="nav-links">
-        <li><a href="#about-heading" class="nav-link">من أنا</a></li>
-        <li><a href="#projects-heading" class="nav-link">مشاريعي</a></li>
-        <li><a href="#accounts-heading" class="nav-link">حساباتي</a></li>
-        <li><a href="#opinions-heading" class="nav-link">آراء الزوار</a></li>
-        <li><a href="#contact-heading" class="nav-link">تواصل معي</a></li>
+        <li><a href="#home" class="active" aria-current="page">الرئيسية</a></li>
+        <li><a href="#about">من أنا</a></li>
+        <li><a href="#skills">المهارات</a></li>
+        <li><a href="#projects">مشاريعي</a></li>
+        <li><a href="#videos">الفيديوهات</a></li>
       </ul>
     </div>
   </nav>
 
-  <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل وضع الألوان">
-    <span id="theme-icon">🌙</span> تبديل الوضع
-  </button>
-
-  <header>
-    <h1>HAKOS WEBSITE</h1>
-    <img src="https://github.com/aehbn/dz/blob/main/logo.PNG?raw=true" alt="شعار HAKOS" class="logo" width="100" height="100">
-    <h2>السلام عليكم</h2>
-    <p>أنا عبد الحق، طالب ثانوي مهتم بالبرمجة، الهاردوير، وصناعة المحتوى.</p>
+  <header id="home" role="banner">
+    <img
+      src="logo.png"
+      alt="شعار HAKOS"
+      class="logo"
+      loading="lazy"
+      width="100"
+      height="100"
+    />
+    <h1>عبد الحق (HAKOS)</h1>
+    <p>طالب ثانوي مهتم بالبرمجة، الهاردوير، وصناعة المحتوى</p>
+    <div class="social-icons" aria-label="روابط التواصل الاجتماعي">
+      <a
+        href="https://t.me/HAKOS_12"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="تيليجرام"
+        ><i class="fab fa-telegram"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/hakos_12/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="إنستغرام"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a
+        href="https://www.youtube.com/channel/UC8cG-O5zDT8KlPsdjlo3Bsw"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="يوتيوب"
+        ><i class="fab fa-youtube"></i
+      ></a>
+    </div>
+    <button
+      class="theme-toggle"
+      aria-pressed="false"
+      aria-label="تبديل الوضع الليلي والفاتح"
+    >
+      تبديل الثيم
+    </button>
   </header>
 
-  <main>
-    <section class="section" aria-labelledby="about-heading" id="about">
-      <h2 id="about-heading">من أنا 👋</h2>
-      <p>طالب مهتم بالمونتاج، التصوير، ألعاب الفيديو، والسفر. أسعى لتطوير مهاراتي التقنية والإبداعية لإنشاء محتوى مميز ومشاريع مبتكرة.</p>
-      
-      <div class="skills-container">
-        <span class="skill">برمجة</span>
-        <span class="skill">هاردوير</span>
-        <span class="skill">مونتاج</span>
-        <span class="skill">تصوير</span>
-        <span class="skill">ألعاب</span>
-        <span class="skill">تطوير ويب</span>
-      </div>
-    </section>
+  <section id="about" class="section" tabindex="-1">
+    <h2>من أنا</h2>
+    <p>
+      اسمي عبد الحق، أدرس في المرحلة الثانوية وأهوى البرمجة،
+      الإلكترونيات، وصناعة المحتوى التعليمي. أحب مشاركة معرفتي مع الآخرين.
+    </p>
+  </section>
 
-    <section class="section" aria-labelledby="projects-heading" id="projects">
-      <h2 id="projects-heading">مشاريعي 🚀</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>قناة يوتيوب</h3>
-          <p>محتوى تعليمي وتثقيفي في مجال التقنية</p>
-        </div>
-        <div class="project-card">
-          <h3>موقع شخصي</h3>
-          <p>تطوير هذا الموقع لعرض أعمالي</p>
-        </div>
-      </div>
-    </section>
+  <section id="skills" class="section" tabindex="-1">
+    <h2>المهارات</h2>
+    <div class="skills-container" aria-label="قائمة المهارات">
+      <span class="skill">برمجة</span>
+      <span class="skill">هاردوير</span>
+      <span class="skill">مونتاج</span>
+      <span class="skill">تصوير</span>
+      <span class="skill">تصميم</span>
+    </div>
+  </section>
 
-    <section class="section" aria-labelledby="accounts-heading" id="accounts">
-      <h2 id="accounts-heading">حساباتي MY ACCOUNTS</h2>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/aeh.bn/" target="_blank" rel="noopener noreferrer" aria-label="إنستغرام">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.youtube.com/@realhakos" target="_blank" rel="noopener noreferrer" aria-label="يوتيوب">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://github.com/aehbn" target="_blank" rel="noopener noreferrer" aria-label="جيت هاب">
-          <i class="fab fa-github"></i>
-        </a>
+  <section id="projects" class="section" tabindex="-1">
+    <h2>مشاريعي</h2>
+    <div class="projects-grid" aria-label="معرض المشاريع">
+      <div class="project-card" tabindex="0">
+        <h3>موقع تعليمي</h3>
+        <p>
+          موقع لتعليم البرمجة للمبتدئين باستخدام HTML، CSS، وJavaScript.
+        </p>
       </div>
-    </section>
-
-    <section class="section" aria-labelledby="opinions-heading" id="opinions">
-      <h2 id="opinions-heading">آراء الزوار 📢</h2>
-      
-      <!-- نموذج إضافة رأي جديد -->
-      <div class="opinion-form">
-        <h3>شاركنا رأيك</h3>
-        <form id="opinionForm" enctype="multipart/form-data">
-          <input type="text" name="name" placeholder="اسمك" required aria-label="اسمك">
-          <textarea name="comment" rows="3" placeholder="اكتب رأيك هنا..." required aria-label="رأيك"></textarea>
-          <div class="image-upload">
-            <label for="opinionImage" class="upload-btn">
-              <i class="fas fa-camera"></i> اختر صورة
-            </label>
-            <input type="file" id="opinionImage" name="image" accept="image/*" style="display:none;">
-            <span id="fileName">لم يتم اختيار صورة</span>
-          </div>
-          <button type="submit">نشر الرأي</button>
-        </form>
+      <div class="project-card" tabindex="0">
+        <h3>روبوت ذكي</h3>
+        <p>
+          تصميم وبرمجة روبوت صغير قادر على تتبع الخط والتحكم عن بعد.
+        </p>
       </div>
-      
-      <!-- عرض الآراء -->
-      <div class="opinions-container" id="opinionsList">
-        <!-- سيتم عرض الآراء هنا من قاعدة البيانات -->
+      <div class="project-card" tabindex="0">
+        <h3>فيديوهات تعليمية</h3>
+        <p>قناة على اليوتيوب تنشر محتوى تعليمي في البرمجة والإلكترونيات.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" aria-labelledby="contact-heading" id="contact">
-      <h2 id="contact-heading">تواصل معي 📩</h2>
-      <form class="contact-form" id="contactForm">
-        <input type="text" placeholder="اسمك" required aria-label="اسمك">
-        <input type="email" placeholder="بريدك الإلكتروني" required aria-label="بريدك الإلكتروني">
-        <textarea rows="4" placeholder="رسالتك" required aria-label="رسالتك"></textarea>
-        <button type="submit">إرسال</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>© <span id="year"></span> جميع الحقوق محفوظة لـ HAKOS</p>
-  </footer>
+  <!-- قسم الفيديوهات الجديد -->
+  <section
+    id="videos"
+    class="section videos-section"
+    tabindex="-1"
+    aria-label="قسم فيديوهات قناة عبد الحق على يوتيوب"
+  >
+    <h2>الفيديوهات</h2>
+    <!-- تضمين قائمة تشغيل قناة اليوتيوب -->
+    <iframe
+      src="https://www.youtube.com/embed/videoseries?list=UCUHHKJnd_3z2XFhy--0iDgw"
+      title="فيديوهات قناة عبد الحق على يوتيوب"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </section>
 
   <script>
-    // تحسين تبديل الثيم
-    function toggleTheme() {
-      document.body.classList.toggle('light-theme');
-      const icon = document.getElementById('theme-icon');
-      if (document.body.classList.contains('light-theme')) {
-        icon.textContent = '☀️';
-        localStorage.setItem('theme', 'light');
-      } else {
-        icon.textContent = '🌙';
-        localStorage.setItem('theme', 'dark');
-      }
-    }
-
-    // تحميل الثيم المفضل من localStorage
-    if (localStorage.getItem('theme') === 'light') {
-      document.body.classList.add('light-theme');
-      document.getElementById('theme-icon').textContent = '☀️';
-    }
-
-    // إزالة شاشة الترحيب بعد التحميل
-    window.addEventListener('load', () => {
-      const welcome = document.querySelector('.welcome-screen');
+    // إزالة شاشة الترحيب بعد 3 ثواني
+    document.addEventListener("DOMContentLoaded", () => {
+      const welcomeScreen = document.querySelector(".welcome-screen");
       setTimeout(() => {
-        welcome.style.animation = 'welcomeFadeOut 0.5s forwards';
-      }, 2500);
-      
-      // تحميل الآراء عند فتح الصفحة
-      loadOpinions();
+        welcomeScreen.style.display = "none";
+      }, 3000);
     });
 
-    // تحديث سنة حقوق النشر
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // تبديل الثيم وتخزين التفضيل
+    const themeToggle = document.querySelector(".theme-toggle");
+    const currentTheme =
+      localStorage.getItem("theme") ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light");
 
-    // معالجة نموذج الاتصال
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('شكراً على رسالتك! سأتواصل معك قريباً.');
-      this.reset();
+    if (currentTheme === "light") {
+      document.body.classList.add("light-theme");
+      themeToggle.setAttribute("aria-pressed", "true");
+    }
+
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
+      const isLight = document.body.classList.contains("light-theme");
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+      themeToggle.setAttribute("aria-pressed", isLight.toString());
     });
 
-    // تحسينات لـ PWA (تطبيق ويب تقدمي)
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').then(registration => {
-          console.log('ServiceWorker registration successful');
-        }).catch(err => {
-          console.log('ServiceWorker registration failed: ', err);
+    // تسجيل Service Worker لدعم PWA وتحسين الأداء
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service-worker.js").catch((error) => {
+          console.error("فشل تسجيل Service Worker:", error);
         });
       });
     }
-
-    // قسم الآراء - معالجة إضافة آراء جديدة
-    document.addEventListener('DOMContentLoaded', function() {
-      // عرض اسم الملف عند اختياره
-      document.getElementById('opinionImage').addEventListener('change', function(e) {
-        const fileName = e.target.files[0] ? e.target.files[0].name : 'لم يتم اختيار صورة';
-        document.getElementById('fileName').textContent = fileName;
-      });
-
-      // معالجة إضافة رأي جديد
-      document.getElementById('opinionForm').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(this);
-        
-        try {
-          const response = await fetch('add_opinion.php', {
-            method: 'POST',
-            body: formData
-          });
-          
-          const result = await response.json();
-          
-          if (result.success) {
-            alert(result.message);
-            this.reset();
-            document.getElementById('fileName').textContent = 'لم يتم اختيار صورة';
-            loadOpinions(); // إعادة تحميل الآراء بعد الإضافة
-          } else {
-            alert(result.message || 'حدث خطأ أثناء حفظ الرأي');
-          }
-        } catch (error) {
-          alert('حدث خطأ أثناء الاتصال بالسيرفر');
-          console.error('Error:', error);
-        }
-      });
-      
-      // دالة لحماية من XSS
-      function escapeHtml(unsafe) {
-        return unsafe
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#039;");
-      }
-    });
-
-    // دالة لجلب الآراء من قاعدة البيانات
-    async function loadOpinions() {
-      try {
-        const response = await fetch('get_opinions.php');
-        const opinions = await response.json();
-        
-        const container = document.getElementById('opinionsList');
-        container.innerHTML = '';
-        
-        if (opinions.length === 0) {
-          container.innerHTML = '<p>لا توجد آراء حتى الآن. كن أول من يشارك رأيه!</p>';
-          return;
-        }
-        
-        opinions.forEach(opinion => {
-          const opinionCard = document.createElement('div');
-          opinionCard.className = 'opinion-card';
-          opinionCard.innerHTML = `
-            <h4>${escapeHtml(opinion.name)}</h4>
-            <p>${escapeHtml(opinion.comment).replace(/\n/g, '<br>')}</p>
-            ${opinion.image_path ? `<img src="${opinion.image_path}" alt="صورة الرأي">` : ''}
-            <span class="opinion-date">${new Date(opinion.created_at).toLocaleDateString('ar-EG')}</span>
-          `;
-          container.appendChild(opinionCard);
-        });
-      } catch (error) {
-        console.error('Error loading opinions:', error);
-        document.getElementById('opinionsList').innerHTML = '<p>حدث خطأ أثناء تحميل الآراء</p>';
-      }
-    }
-
-    // دالة لتفعيل الروابط في قائمة التنقل
-    function setupNavLinks() {
-      const navLinks = document.querySelectorAll('.nav-link');
-      const sections = document.querySelectorAll('.section');
-      
-      // تحديث الرابط النشط عند التمرير
-      window.addEventListener('scroll', () => {
-        let current = '';
-        
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          
-          if (window.scrollY >= sectionTop - 100) {
-            current = section.getAttribute('id');
-          }
-        });
-        
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${current}-heading`) {
-            link.classList.add('active');
-          }
-        });
-      });
-      
-      // سلوك ناعم للروابط
-      navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetId = link.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-          
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    }
-    
-    // تفعيل قائمة التنقل
-    setupNavLinks();
   </script>
 </body>
 </html>
